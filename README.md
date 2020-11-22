@@ -273,9 +273,13 @@ Burp
 
 `.zshrc`
 
-### .gitconfig:
+### Git configuration:
 
 `.gitconfig`
+
+### tmux settings
+
+`.tmux.conf`
 
 ### Sublime settings:
 

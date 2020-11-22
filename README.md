@@ -48,7 +48,7 @@ Change login screen image
 #lockDialogGroup {
   background: #2c001e url(resource:///org/gnome/shell/theme/noise-texture.png);
   background-repeat: repeat; 
- }
+}
 ```
 - Change it to
 ```
@@ -99,22 +99,25 @@ sudo apt install zsh \
                  hashcash \
                  volatility
 
-# GUI stuff         
+# Desktop stuff         
 sudo apt install vim-gtk3 \
                  evolution \
                  chromium-browser \
                  gnome-tweak-tool \
                  wireshark \
                  gimp \
-                 virt-manager \
-                 radare2 \
                  bless \
                  ffmpeg \
                  libavcodec-extra \
                  audacity \
                  vlc \
                  obs-studio \
-                 gocr
+                 gocr \
+                 qemu \
+                 qemu-kvm \
+                 virt-manager \
+                 virt-viewer \
+                 libvirt-bin
 
 sudo snap install 1password-linux
 sudo snap install --classic code
@@ -183,7 +186,7 @@ git clone https://github.com/mkorman9/scripts
 
 Create my workspace folder
 ```bash
-mkdir -p ~/workspace && cd ~/workspace
+mkdir -p ~/workspace
 ```
 
 ### Essential tweaking
@@ -290,12 +293,19 @@ sudo wget -P /usr/local/bin https://raw.githubusercontent.com/internetwache/GitT
 ```
 
 Burp
-* Download Burp Community from https://portswigger.net/burp/communitydownload and save into /opt
+* Download Burp Community (JAR version) from https://portswigger.net/burp/communitydownload and save into /opt
 * `chmod 400 /opt/burpsuite_community_v2020.4.jar`
 * Start Burp
 * Start Chromium (`chromium-browser --proxy-server="127.0.0.1:8080"`), navigate to `burp/` and download CA cert
 * Go to Settings -> Manage Certificates -> Authorities -> Import and choose the downloaded CA cert
 * Trust this certificate
+
+IDA 64
+```bash
+wget -O /tmp/idafree70_linux.run https://out7.hex-rays.com/files/idafree70_linux.run
+chmod +x /tmp/idafree70_linux.run
+/tmp/idafree70_linux.run
+```
 
 ### Shell configuration
 

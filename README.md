@@ -101,6 +101,7 @@ sudo apt install zsh \
 
 # GUI stuff         
 sudo apt install vim-gtk3 \
+                 evolution \
                  chromium-browser \
                  gnome-tweak-tool \
                  wireshark \

@@ -75,6 +75,7 @@ sudo apt install zsh \
                  nano \
                  tree \
                  jq \
+                 libxml2-utils \
                  dnsutils \
                  traceroute \
                  netcat \

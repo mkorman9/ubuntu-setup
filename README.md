@@ -80,9 +80,9 @@ sudo apt install zsh \
                  nmap \
                  net-tools \
                  htop \
-                 neofetch
+                 neofetch \
                  vim \
-                 screen \ 
+                 screen \
                  tmux \
                  unrar \
                  p7zip-full \

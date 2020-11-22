@@ -92,7 +92,6 @@ sudo apt install zsh \
                  ca-certificates \
                  libmpc-dev \
                  attr \
-                 gocr \
                  binwalk \
                  john \
                  hashcat \
@@ -113,7 +112,8 @@ sudo apt install vim-gtk3 \
                  libavcodec-extra \
                  audacity \
                  vlc \
-                 obs-studio
+                 obs-studio \
+                 gocr
 
 sudo snap install 1password-linux
 sudo snap install --classic code

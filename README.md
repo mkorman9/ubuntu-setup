@@ -69,9 +69,10 @@ sudo apt upgrade
 # command line stuff
 sudo apt install zsh \
                  git \
-                 mc \
-                 nano \
                  curl \
+                 wget \
+                 vim \
+                 nano \
                  tree \
                  jq \
                  dnsutils \
@@ -81,7 +82,6 @@ sudo apt install zsh \
                  net-tools \
                  htop \
                  neofetch \
-                 vim \
                  screen \
                  tmux \
                  unrar \
@@ -210,15 +210,34 @@ ssh-add ~/.ssh/id_rsa
 Upload generated key to github and gitlab
 
 ### Python stuff
+Create a folder for global virtual envs
 ```bash
 mkdir ~/.virtualenvs
+```
 
+Install Python 3.8
+```bash
+# Both Ubuntu 18.04 and 20.04
 sudo apt install python3.8 python3.8-venv python3.8-dev python3-venv
 python3.8 -m venv ~/.virtualenvs/common_py3
+```
 
+Install Python 2.7
+```bash
+# Ubuntu 18.04
 sudo apt install python python-virtualenv python-dev
 python2 -m virtualenv ~/.virtualenvs/common_py27
 
+# Ubuntu 20.04
+sudo apt install python2
+wget -O /tmp/get-pip.py https://bootstrap.pypa.io/get-pip.py
+python2 /tmp/get-pip.py
+python2 -m pip install virtualenv
+python2 -m virtualenv ~/.virtualenvs/common_py27
+```
+
+Install essential modules
+```bash
 # For both environments
 pip install boto \
     ipython \

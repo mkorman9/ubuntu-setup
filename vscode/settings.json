@@ -1,0 +1,10 @@
+{
+    "keyboard.dispatch": "keyCode",
+    "files.autoSave": "afterDelay",
+    "telemetry.enableTelemetry": false,
+    "window.restoreWindows": "none",
+    "workbench.startupEditor": "newUntitledFile",
+    "files.enableTrash": false,
+    "window.titleBarStyle": "custom",
+    "window.customMenuBarAltFocus": false
+}

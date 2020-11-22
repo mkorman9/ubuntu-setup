@@ -1,0 +1,25 @@
+[user]
+    name = Michał Korman
+    email = michal.korman@icloud.com
+    signingkey = CAA622DF6DEA7DE4
+[alias]
+    s = status
+    c = commit -m
+    p = push
+    l = log --pretty=format:"%h%x09%an%x09%ad%x09%s"
+    a = add
+    au = add -u
+    cs = commit -S -m
+    u = pull --ff-only
+    urb = pull --rebase
+    crb = rebase --continue
+    arb = rebase --abort
+    sw = switch
+    nb = checkout -b
+    db = branch -d
+    unstage = restore --staged
+    branches = !git --no-pager branch --list -a
+    tags = !git --no-pager tag --list
+[core]
+    autocrlf = false
+    ignoreCase = false

@@ -6,7 +6,7 @@ ZSH_THEME="robbyrussell"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
-alias ll='ls -latr'
+alias ll='ls -lah'
 
 alias ipy="ipython"
 alias py="source pyutil"

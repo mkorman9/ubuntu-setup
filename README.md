@@ -105,6 +105,7 @@ sudo apt install vim-gtk3 \
                  gnome-tweak-tool \
                  wireshark \
                  gimp \
+                 virt-manager \
                  radare2 \
                  bless \
                  ffmpeg \

@@ -254,6 +254,12 @@ pip install boto \
     flask
 ```
    
+Configure IPython to stop asking annoying questions
+```bash
+ipython profile create
+sed -i 's/# c.TerminalInteractiveShell.confirm_exit = True/c.TerminalInteractiveShell.confirm_exit = False/g' ~/.ipython/profile_default/ipython_config.py
+```
+
 ### JavaScript stuff
 ```bash
 curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -

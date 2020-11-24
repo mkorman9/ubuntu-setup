@@ -63,8 +63,6 @@ Change login screen image
 ### Software
 Install my regular stuff
 ```bash
-sudo add-apt-repository ppa:git-core/ppa  # only for Ubuntu 18.04 to get git >= 2.25
-
 sudo apt update
 sudo apt upgrade
 
@@ -91,6 +89,7 @@ sudo apt install zsh \
                  p7zip-full \
                  liblz4-tool \
                  ca-certificates \
+                 software-properties-common \
                  build-essential \
                  apt-transport-https \
                  gnupg2 \
@@ -123,6 +122,12 @@ sudo apt install vim-gtk3 \
                  libvirt-bin
 ```
    
+**Only for Ubuntu 18.04** - make sure git is at version >= 2.25
+```bash
+sudo add-apt-repository ppa:git-core/ppa
+sudo apt update && sudo apt install git
+```
+
 Install Docker
 ```bash
 wget -qO - https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -

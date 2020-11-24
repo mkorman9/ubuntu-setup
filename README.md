@@ -63,6 +63,8 @@ Change login screen image
 ### Software
 Install my regular stuff
 ```bash
+sudo add-apt-repository ppa:git-core/ppa  # only for Ubuntu 18.04 to get git >= 2.25
+
 sudo apt update
 sudo apt upgrade
 
@@ -123,7 +125,7 @@ sudo apt install vim-gtk3 \
    
 Install Docker
 ```bash
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+wget -qO - https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo apt-add-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 sudo apt update && sudo apt install docker-ce docker-ce-cli containerd.io
 sudo usermod -aG docker $USER
@@ -132,17 +134,16 @@ sudo usermod -aG docker $USER
 Install Java
 ```bash
 wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
-sudo add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
-sudo apt update
-sudo apt install adoptopenjdk-8-hotspot adoptopenjdk-11-hotspot 
+sudo add-apt-repository "deb [arch=amd64] https://adoptopenjdk.jfrog.io/adoptopenjdk/deb $(lsb_release -cs) main"
+sudo apt update && sudo apt install adoptopenjdk-8-hotspot adoptopenjdk-11-hotspot 
 
 sudo update-alternatives --config java  # choose adoptopenjdk-8-hotspot as default
 ```
 
 Install Spotify
 ```bash
-curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add - 
-echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+wget -qO - https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add - 
+sudo add-apt-repository "deb http://repository.spotify.com stable non-free"
 sudo apt-get update && sudo apt-get install spotify-client
 ```
 

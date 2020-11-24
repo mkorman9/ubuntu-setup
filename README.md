@@ -118,15 +118,13 @@ sudo apt install vim-gtk3 \
                  virt-manager \
                  virt-viewer \
                  libvirt-bin
-
-sudo snap install --classic code
 ```
    
 Install Docker
 ```bash
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo apt-add-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-sudo apt install docker-ce docker-ce-cli containerd.io
+sudo apt update && sudo apt install docker-ce docker-ce-cli containerd.io
 sudo usermod -aG docker $USER
 ```
 
@@ -151,7 +149,7 @@ Install Sublime
 ```bash
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 sudo apt-add-repository "deb https://download.sublimetext.com/ apt/stable/"
-sudo apt install sublime-text
+sudo apt update && sudo apt install sublime-text
 ```
 
 Install Idea
@@ -164,6 +162,13 @@ sudo mv idea-IC-201.7223.91 /opt
 rm -f ideaIC-2020.1.1.tar.gz
 sudo chown -R michal:michal /opt/idea-IC-201.7223.91
 /opt/idea-IC-201.7223.91/bin/idea.sh 
+```
+
+Install VSCode
+```bash
+wget -qO - https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+sudo apt-add-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+sudo apt update && sudo apt install code
 ```
 
 ### Terminal stuff

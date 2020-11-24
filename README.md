@@ -88,9 +88,10 @@ sudo apt install zsh \
                  unrar \
                  p7zip-full \
                  liblz4-tool \
+                 ca-certificates \
                  build-essential \
                  apt-transport-https \
-                 ca-certificates \
+                 gnupg2 \
                  libmpc-dev \
                  attr \
                  binwalk \
@@ -272,8 +273,9 @@ sed -i 's/# c.TerminalInteractiveShell.confirm_exit = True/c.TerminalInteractive
 
 ### JavaScript stuff
 ```bash
-curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-sudo apt install -y nodejs
+wget -qO - https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
+sudo apt-add-repository "deb https://deb.nodesource.com/node_14.x $(lsb_release -cs) main"
+sudo apt update && sudo apt install nodejs
 ```
 
 ### Hacking stuff

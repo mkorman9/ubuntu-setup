@@ -119,7 +119,6 @@ sudo apt install vim-gtk3 \
                  virt-viewer \
                  libvirt-bin
 
-sudo snap install 1password-linux
 sudo snap install --classic code
 ```
    

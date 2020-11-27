@@ -178,6 +178,12 @@ sudo apt-add-repository "deb [arch=amd64] https://packages.microsoft.com/repos/v
 sudo apt update && sudo apt install code
 ```
 
+Install go
+```bash
+wget -P /tmp https://golang.org/dl/go1.15.5.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf /tmp/go1.15.5.linux-amd64.tar.gz
+```
+
 ### Terminal stuff
 Install oh-my-zsh
 ```bash

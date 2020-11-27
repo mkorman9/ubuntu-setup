@@ -1,4 +1,4 @@
-export PATH="$PATH:$HOME/scripts:/opt/idea-IC-201.7223.91/bin"
+export PATH="$PATH:$HOME/scripts:/opt/idea-IC-201.7223.91/bin:/usr/local/go/bin"
 export NODE_OPTIONS="--experimental-repl-await"
 export ZSH="/home/michal/.oh-my-zsh"
 

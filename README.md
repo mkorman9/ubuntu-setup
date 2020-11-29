@@ -119,7 +119,8 @@ sudo apt install vim-gtk3 \
                  qemu-kvm \
                  virt-manager \
                  virt-viewer \
-                 libvirt-bin
+                 libvirt-bin \
+                 graphviz
 ```
    
 **Only for Ubuntu 18.04** - make sure git is at version >= 2.25

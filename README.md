@@ -14,7 +14,7 @@ Open `Terminal -> Edit -> Preferences`
    
 Open `Settings -> Devices -> Keyboard -> Add shortcut`: 
 - name: `open terminal` 
-- command: `gnome-terminal --maximize -e tmux` 
+- command: `gnome-terminal --maximize` 
 - shortcut: `WIN+Enter`
    
 Open Settings -> Universal Access -> Repeat Keys:   
